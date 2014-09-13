@@ -5,9 +5,12 @@ and started solving the problems individually. The major obsticles were in imple
 and the estimate UDP datagram loss as there wasn't much info on the internet on how to achieve this.
 Below are some estimates on how much time we spent on each task.  
 
-1)UDPForwarder
-2)TCPForwarder -> Design:1hour, Code:2hours
-3)drop-in replacement for DatagramSocket
-4)RFC862 udp/tcp echo server -> Design:1 hour, Code:3hours
-5)estimate UDP datagram loss
-6)realiable UDP ->Design:4 hours, Code 2 hours 
+As a side note, the questionable Datagram socket was a bit tricky to understand with what was meant by reordering. 
+Whether it was reordering the content, or reordering the packets as they were sent. We chose to scramble the message.
+
+1)UDPForwarder Design: 15 min, Code: 15 min (ruby)
+2)TCPForwarder -> Design:1hour, Code:2hours (java)
+3)drop-in replacement for DatagramSocket -> Code: 10 min, 1 hour (ruby)
+4)RFC862 udp/tcp echo server -> Design:1 hour, Code:3hours (java)
+5)estimate UDP datagram loss Design: 2 hours, Code: 1 hour (ruby)
+6)realiable UDP ->Design:4 hours, Code 2 hours (java)
