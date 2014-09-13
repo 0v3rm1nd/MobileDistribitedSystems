@@ -1,0 +1,13 @@
+------------Project Overview--------------
+
+We spent quite a bit of time on both design and code. Initially we distributed the work in half
+and started solving the problems individually. The major obsticles were in implementing the reliable UDP
+and the estimate UDP datagram loss as there wasn't much info on the internet on how to achieve this.
+Below are some estimates on how much time we spent on each task.  
+
+1)UDPForwarder
+2)TCPForwarder -> Design:1hour, Code:2hours
+3)drop-in replacement for DatagramSocket
+4)RFC862 udp/tcp echo server -> Design:1 hour, Code:3hours
+5)estimate UDP datagram loss
+6)realiable UDP ->Design:4 hours, Code 2 hours 
