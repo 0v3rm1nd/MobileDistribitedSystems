@@ -1,0 +1,10 @@
+----Feedback----
+
+The main obsticles were to make the concurrency properly. We spent quite a bit of time refactoring and optimizing the 
+parallel and concurrent implementation. For example initially we did the solution with Threads only, however we then
+decided to use tasks and the Executor framework to make our system a lot more resource friendly and responsive. Other
+than that the task was quite simple (our implementation is 150 lines of code) and easy to implement when it comes to logic as
+there are numerous ways to make this work.
+
+----Time Consumption----
+2 hours per person

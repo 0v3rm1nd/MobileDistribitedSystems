@@ -1,0 +1,19 @@
+Program Made by Martin Ivanov and Edgars Ankorins
+
+NOTE --> The processing server uses Java 8 specific libraries like Executors.newWorkStealingPool() thus 
+it requires java 8 installed and must be compiled with javac 8
+
+1)No, the processes are not web services
+2)Yes, the system is both time(sources and sinks don't need to send/receive simultaneously) 
+and space(sources don't need to know the identity of sinks and vice versa) decoupled
+3)No, the system is not a messaging queue (however it does take some parts of its characteristics)
+4)Yes, the even though we are not using any fancy frameworks like JMS we have a centralized server
+that handles connections from the 2 processes (sink and source) on 2 different ports (7007 for source and 7008 for sink),
+so we have 1 thread for each (total of 2 listening threads). Then when connectons arrive we make an individual task for each
+(depending on whether it is a source or sink) and we submit them to an Executors.newWorkStealingPool() for processing the request.
+So both sinks and sources can connect to the processing server independently. Sources are publishers that send messages and sinks
+are subscribers that consume them and print them out.
+5)We have not done in depth testing (even though the program is pretty short there is a lot of room for error due to is concurrent nature)
+but the main sources of failure are connected with the processing server as it is the "brains" that processes connections from source and sinks. 
+This means that if there is not enough resources to support the execution of the tasks the requests could be rejected by the server even though we have used a highly 
+efficient Executors.newWorkStealingPool() that will distribute tasks across multiple work queues.
