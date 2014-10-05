@@ -119,9 +119,10 @@ public class ProcessingServer {
                         if (!messages.isEmpty()) {
                             //send source messages to sink
                             for (int i = 0; i < messages.size(); i++) {
-                                outToSink.writeBytes(messages.get(0));
-                                messages.clear();
+                                outToSink.writeBytes(messages.get(i));
+                               
                             }
+                             messages.clear();
                         } else {
                             synchronized (lock) {
                                 //we wait for messages to be produced by the sources
