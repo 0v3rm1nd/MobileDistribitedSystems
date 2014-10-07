@@ -1,0 +1,7 @@
+start cmd /k "f: && cd F:\Workspaces\IntelliJWorkspace\MobileDisSystems\MiniProject2\src && java Source localhost"
+start cmd /k "f: && cd F:\Workspaces\IntelliJWorkspace\MobileDisSystems\MiniProject2\src && java Source localhost"
+start cmd /k "f: && cd F:\Workspaces\IntelliJWorkspace\MobileDisSystems\MiniProject2\src && java Source localhost"
+start cmd /k "f: && cd F:\Workspaces\IntelliJWorkspace\MobileDisSystems\MiniProject2\src && java Sink localhost"
+start cmd /k "f: && cd F:\Workspaces\IntelliJWorkspace\MobileDisSystems\MiniProject2\src && java Sink localhost"
+start cmd /k "f: && cd F:\Workspaces\IntelliJWorkspace\MobileDisSystems\MiniProject2\src && java Sink localhost"
+start cmd /k "f: && cd F:\Workspaces\IntelliJWorkspace\MobileDisSystems\MiniProject2\src && java Sink localhost"
